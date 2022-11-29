@@ -1,12 +1,24 @@
-class CreateItems < ActiveRecord::Migration[6.1]
+class CreateDogHouses < ActiveRecord::Migration[6.1]
   def change
-    create_table :items do |t|
+    create_table :dog_houses do |t|
+      t.string :image
       t.string :name
-      t.string :description
+      t.string :city
       t.integer :price
-      t.belongs_to :user, null: false, foreign_key: true
+      t.boolean :favorite
+      t.decimal :latitude, precision: 10, scale: 6
+      t.decimal :longitude, precision: 10, scale: 6
 
       t.timestamps
     end
   end
 end
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,13 @@
-class CreateUsers < ActiveRecord::Migration[6.1]
+class CreateDogHouses < ActiveRecord::Migration[6.1]
   def change
-    create_table :users do |t|
-      t.string :username
+    create_table :dog_houses do |t|
+      t.string :image
+      t.string :name
       t.string :city
+      t.integer :price
+      t.boolean :favorite
+      t.decimal :latitude, precision: 10, scale: 6
+      t.decimal :longitude, precision: 10, scale: 6
 
       t.timestamps
     end
